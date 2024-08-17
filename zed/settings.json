@@ -1,0 +1,25 @@
+{
+  "base_keymap": "VSCode",
+  // UI Settings
+  "ui_font_size": 15,
+  // Editor Settings
+  "buffer_font_size": 15,
+  "buffer_font_family": "CaskaydiaMonoNF-Bold",
+  "buffer_font_weight": 700,
+  "autosave": "on_focus_change",
+  "buffer_line_height": "standard",
+  "always_treat_brackets_as_autoclosed": false,
+  "current_line_highlight": "none",
+  "cursor_blink": true,
+  "formatter": "prettier",
+  "indent_guides": {
+    "coloring": "fixed"
+  },
+
+  // Theme Settings
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Gruvbox Dark"
+  }
+}
