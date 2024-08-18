@@ -5,6 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# XDG
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+
+. "$HOME/.cargo/env"
+
 ZINIT_HOME="${XDG_DATA_HOME}:-${HOME}/.local/share/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -23,11 +31,15 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
 
-
-
 # Key bindings
 bindkey '^f' autosuggest-accept
 
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000 
+export HISTDUP=erase                    # Erase duplicates in history
 setopt appendhistory                    # Append history to file
 setopt sharehistory                     # Share history between sessions
 setopt hist_ignore_space                # Ignore commands starting with space
@@ -48,6 +60,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias cls="clear"
 alias ze="zed"
 alias ld="eza -lD"                
+alias lg="lazygit"
 alias lh="eza -dl .* --group-directories-first --icons"
 alias ll="eza -al --group-directories-first --icons"
 alias ls="eza -alf --color=always --sort=size --icons | grep -v /"
@@ -79,12 +92,19 @@ esac
 # zoxide init
 eval "$(zoxide init zsh)"
 
-# fzf
+#fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 eval "$(fzf --zsh)"
 
 # vim
 bindkey -v
 export KEYTIMEOUT=1
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Expose .local/bin to PATH
 export PATH=/home/tao/.local/bin:$PATH
