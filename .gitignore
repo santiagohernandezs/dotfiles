@@ -1,5 +1,4 @@
-zsh/**/.zcompdump 
-zsh/**/.zhistory
+
 
 nvim/**/lazy-lock.json
 zsh/.config/zsh/.zhistory
