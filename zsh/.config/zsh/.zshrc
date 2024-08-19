@@ -77,16 +77,12 @@ autoload -U compinit && compinit
 
 zinit cdreplay -q
 
+# Expose .local/bin to PATH
+export PATH=/home/tao/.local/bin:$PATH
+
 # nvm
 export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 # zoxide init
 eval "$(zoxide init zsh)"
@@ -104,9 +100,6 @@ export KEYTIMEOUT=1
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"
-
-# Expose .local/bin to PATH
-export PATH=/home/tao/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
