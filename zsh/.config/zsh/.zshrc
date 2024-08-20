@@ -66,7 +66,9 @@ alias ll="eza -al --group-directories-first --icons"
 alias ls="eza -alf --color=always --sort=size --icons | grep -v /"
 alias lt="eza -al --sort=modified --icons"
 alias cat="bat"
-alias tmux="tmux"
+alias tm="tmux"
+alias vi="nvim"
+alias top="btop"
 
 # Snippets
 zinit snippet OMZP::zoxide
