@@ -1,6 +1,6 @@
 [core]
   editor = nvim -f
-    autocrlf = true
+  autocrlf = true
 [user]
     name = Santiago Hernandez
     email = santiagooheernandez@gmail.com
