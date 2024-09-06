@@ -59,8 +59,9 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias cls="clear"
 alias ze="zed"
-alias ld="eza -lD"                
+alias ld="lazydocker"
 alias lg="lazygit"
+alias sf="spf" # superfile commnad
 alias lh="eza -dl .* --group-directories-first --icons"
 alias ll="eza -al --group-directories-first --icons"
 alias ls="eza -alf --color=always --sort=size --icons | grep -v /"
