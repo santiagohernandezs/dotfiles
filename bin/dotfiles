@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function is_installed {
+  if [ command -v $1 &> /dev/null ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+function main {
+  is_installed ansible
+  if [ $? -eq 0 ]; then
+    echo "Ansible is already installed"
+  else
+    echo "Installing Ansible"
+    dnf install ansible --assumeyes
+
+    echo "Installing Ansible Galaxy roles"
+  
+  fi
+}
+
+main
+
