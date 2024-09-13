@@ -1,6 +1,7 @@
 [core]
   editor = nvim -f
-  autocrlf = true
+	autocrlf = true
+  attributesFile = ~/.config/git/gitattributes
 [user]
     name = Santiago Hernandez
     email = santiagooheernandez@gmail.com
