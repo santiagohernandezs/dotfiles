@@ -118,4 +118,10 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# pyenv
+export PYENV_ROOT="$XDG_CONFIG_HOME/pyenv"
+[[ -d $PYENV_ROOT ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # pnpm end
