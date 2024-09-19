@@ -55,6 +55,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# SSH Agent
+export SSH_AUTH_SOCK="~/.1password/ssh-agent.sock"
 
 # Aliases
 alias cls="clear"
