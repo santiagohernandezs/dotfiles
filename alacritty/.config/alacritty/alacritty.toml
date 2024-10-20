@@ -1,0 +1,45 @@
+# There are the specification here: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+
+# example: WINDOW, COLORS, etc. are tables, and should be represented as [window], [colors], respectively.
+# specifics of variables go under them. e.g.- look under "dynamic_padding" under-
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#window
+# write `dynamic_padding = true` (without backticks -`) under the table [window]
+# for variables with multiple values, use "dotted keys". Like setting `padding.x = 5` under [window].
+# This is simple. If not clear, do several trials and errors.
+
+# Below is my initial set-up. The TOML homepage (https://toml.io/en/v1.0.0) was very helpful in figuring this out. 
+# I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
+# https://github.com/alacritty/alacritty/tree/master#configuration
+
+import = [
+  '~/.config/alacritty/themes/themes/enfocado_dark.toml',
+]
+
+[window]
+
+opacity = 1
+
+padding.x = 10
+padding.y = 10
+
+decorations = "None" # "full", "buttonless", "none"
+decorations_theme_variant = "Dark" # "Dark"
+
+[font]
+
+size = 11.0
+normal.family = "CaskaydiaMonoNerdFont"
+normal.style = "Regular"
+bold.family = "CaskaydiaMonoNerdFont"
+bold.style = "Bold"
+italic.family = "CaskaydiaMonoNerdFont"
+italic.style = "Italic"
+bold_italic.family = "CaskaydiaMonoNerdFont"
+bold_italic.style = "Bold Italic"
+
+[shell]
+program="/bin/zsh"
+args=["-l"]
+
+# [env]
+# TERM= 'xterm-256color'
