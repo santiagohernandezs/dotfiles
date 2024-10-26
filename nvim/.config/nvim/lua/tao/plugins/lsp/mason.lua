@@ -31,7 +31,6 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
-				"svelte",
 				"lua_ls",
 				"graphql",
 				"emmet_ls",
@@ -39,7 +38,10 @@ return {
 				"rust_analyzer",
 				"prismals",
 				"pyright",
+				"gopls",
 			},
+
+			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
