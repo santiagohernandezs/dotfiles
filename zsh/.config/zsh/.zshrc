@@ -34,6 +34,9 @@ zinit light Aloxaf/fzf-tab
 # Key bindings
 bindkey '^f' autosuggest-accept
 
+# Source zsh aliases
+source $XDG_CONFIG_HOME/zsh/.zsh_aliases
+
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
@@ -57,24 +60,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # SSH Agent
 export SSH_AUTH_SOCK="~/.1password/ssh-agent.sock"
-
-# Aliases
-alias cls="clear"
-alias ze="zed"
-alias ld="lazydocker"
-alias lg="lazygit"
-alias sf="spf" # superfile commnad
-alias lh="eza -dl .* --group-directories-first --icons"
-alias ll="eza -al --group-directories-first --icons"
-alias ls="eza -alf --color=always --sort=size --icons | grep -v /"
-alias lt="eza -al --sort=modified --icons"
-alias cat="bat"
-alias tm="tmux"
-alias vi="nvim"
-alias vc="NVIM_APPNAME=nvim-chad nvim"
-alias top="btop"
-alias nrd="nordvpn"
-alias szsh="source ~/.config/zsh/.zshrc"
 
 # Snippets
 zinit snippet OMZP::zoxide
@@ -117,9 +102,6 @@ export PATH="$RYE_HOME/shims:$PATH"
 # deno
 export DENO_INSTALL="$XDG_DATA_HOME/deno"
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
 # pnpm
 export PNPM_HOME="/home/tao/.local/share/pnpm"
 case ":$PATH:" in
@@ -140,3 +122,6 @@ eval "$(pyenv init --path)"
 
 # go
 export PATH=$PATH:/usr/local/go/bin
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
