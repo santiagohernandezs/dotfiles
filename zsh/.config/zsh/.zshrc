@@ -74,6 +74,9 @@ zinit cdreplay -q
 # Expose .local/bin to PATH
 export PATH=/home/tao/.local/bin:$PATH
 
+# 1password completions
+eval "$(op completion zsh)"; compdef _op op
+
 # nvm
 export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -94,10 +97,6 @@ export KEYTIMEOUT=1
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"
-
-# rye
-export RYE_HOME="$XDG_CONFIG_HOME/rye"
-export PATH="$RYE_HOME/shims:$PATH"
 
 # deno
 export DENO_INSTALL="$XDG_DATA_HOME/deno"
@@ -123,5 +122,11 @@ eval "$(pyenv init --path)"
 # go
 export PATH=$PATH:/usr/local/go/bin
 
+# bun completions
+[ -s "/home/tao/.bun/_bun" ] && source "/home/tao/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
