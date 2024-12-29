@@ -1,0 +1,92 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: RobotoMonoNerdFont, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+}
+
+window {
+  color: rgba(217, 216, 216, 1);
+  background-color: rgba(33, 33, 33, 0.99);
+  border-radius: 10px;
+}
+
+window#waybar {
+  color: rgba(217, 216, 216, 1);
+}
+
+#workspaces {
+  background-color: transparent;
+  background-color: rgba(33, 33, 33, 0.99);
+  margin: 5px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: rgba(217, 216, 216, 0.4);
+  background-color: rgba(59, 53, 54, 0.99);
+}
+
+#workspaces button:hover {
+  color: rgba(33, 33, 33, 0.99);
+  background-color: rgba(99, 88, 82, 0.99);
+}
+
+#workspaces button:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
+#workspaces button.visible {
+  color: rgba(217, 216, 216, 1);
+  background-color: rgba(99, 88, 82, 0.99);
+}
+
+#workspaces button.urgent {
+  animation: pulse 1s infinite;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#tray,
+#custom-storage,
+#custom-spotify,
+#custom-weather {
+  margin: 5px;
+  min-width: 30px;
+  background-color: rgba(59, 53, 54, 0.99);
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+#clock {
+  margin: 5px 0px;
+  background-color: rgba(59, 53, 54, 0.99);
+  min-width: 140px;
+  border-radius: 5px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(99, 88, 82, 0.99);
+  }
+  50% {
+    background-color: rgba(238, 46, 36, 0.99);
+  }
+  100% {
+    background-color: rgba(99, 88, 82, 0.99);
+  }
+}
