@@ -14,7 +14,7 @@ opt.wrap = true
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true  -- if you include mixed cases in your search, assumes you want case-sensitive
+opt.smartcase = true -- if you include mixed cases in your search, assumes you want case-sensitive
 
 opt.cursorline = true
 
@@ -31,3 +31,6 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- Conceal
+-- opt.conceallevel = 2 -- Usefull for markdown
