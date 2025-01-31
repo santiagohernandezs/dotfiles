@@ -5,13 +5,14 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			-- javascript = { "biomejs" },
-			typescript = { "eslint_d" },
-			-- typescript = { "biomejs" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			-- typescriptreact = { "biomejs" },
+			-- javascript = { "eslint_d" },
+			javascript = { "biomejs" },
+			-- typescript = { "eslint_d" },
+			typescript = { "biomejs" },
+			-- javascriptreact = { "eslint_d" },
+			javascriptreact = { "biomejs" },
+			-- typescriptreact = { "eslint_d" },
+			typescriptreact = { "biomejs" },
 			svelte = { "eslint_d" },
 			python = { "pylint" },
 			latex = { "chktex" },
@@ -27,7 +28,7 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<leader>l", function()
+		vim.keymap.set("n", "<leader>ll", function()
 			lint.try_lint()
 		end, { desc = "Trigger linting for current file" })
 	end,
