@@ -2,15 +2,18 @@
     "layer": "bottom",
     "position": "top",
     "height": 30,
-    "margin-top": 10,
-    "margin-right": 10,
-    "margin-left": 10,
+    "margin-right": 5,
+    "margin-left": 5,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "backlight", "pulseaudio", "network", "idle_inhibitor"],
+    "modules-right": ["tray", "custom/spotify", "backlight", "pulseaudio", "network", "sway/language"],
     "sway/mode": {
         "format": " {}"
+    },
+    "sway/language": {
+      "format": "  {short}",
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
     },
     "sway/workspaces": {
         "format": "{name}",
@@ -73,14 +76,14 @@
         "exec": "~/.config/waybar/modules/weather.sh",
         "exec-if": "ping wttr.in -c1"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": false
-    },
+    // "idle_inhibitor": {
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "activated": "",
+    //         "deactivated": ""
+    //     },
+    //     "tooltip": false
+    // },
     "tray": {
         "icon-size": 18
     }

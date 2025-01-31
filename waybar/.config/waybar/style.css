@@ -1,3 +1,10 @@
+@define-color bg_color rgba(26, 26, 25, 0.99);
+@define-color fg_color rgba(209, 209, 209, 1);
+@define-color button_bg_color rgba(59, 53, 54, 0.99);
+@define-color button_fg_color rgba(217, 216, 216, 1);
+@define-color button_bg_color_hover rgba(99, 88, 82, 0.99);
+@define-color button_fg_color_hover rgba(33, 33, 33, 0.99);
+
 * {
   border: none;
   border-radius: 0px;
@@ -6,34 +13,32 @@
   font-weight: 600;
   box-shadow: none;
   text-shadow: none;
-  transition-duration: 0s;
 }
 
 window {
-  color: rgba(217, 216, 216, 1);
-  background-color: rgba(33, 33, 33, 0.99);
-  border-radius: 10px;
+  color: @fg_color;
+  background-color: transparent;
 }
 
 window#waybar {
-  color: rgba(217, 216, 216, 1);
+  color: @fg_color;
 }
 
 #workspaces {
   background-color: transparent;
-  background-color: rgba(33, 33, 33, 0.99);
+  background-color: @bg_color;
   margin: 5px;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: rgba(217, 216, 216, 0.4);
-  background-color: rgba(59, 53, 54, 0.99);
+  color: @button_fg_color;
+  background-color: @button_bg_color;
 }
 
 #workspaces button:hover {
-  color: rgba(33, 33, 33, 0.99);
-  background-color: rgba(99, 88, 82, 0.99);
+  color: @button_fg_color_hover;
+  background-color: @button_bg_color_hover;
 }
 
 #workspaces button:first-child {
@@ -45,8 +50,8 @@ window#waybar {
 }
 
 #workspaces button.visible {
-  color: rgba(217, 216, 216, 1);
-  background-color: rgba(99, 88, 82, 0.99);
+  color: @button_fg_color;
+  background-color: @button_bg_color_hover;
 }
 
 #workspaces button.urgent {
@@ -62,19 +67,22 @@ window#waybar {
 #idle_inhibitor,
 #backlight,
 #tray,
+#language,
 #custom-storage,
 #custom-spotify,
 #custom-weather {
   margin: 5px;
   min-width: 30px;
-  background-color: rgba(59, 53, 54, 0.99);
+  background-color: @button_bg_color;
+  color: @button_fg_color;
   padding: 0px 10px;
   border-radius: 5px;
 }
 
 #clock {
   margin: 5px 0px;
-  background-color: rgba(59, 53, 54, 0.99);
+  background-color: @button_bg_color;
+  color: @button_fg_color;
   min-width: 140px;
   border-radius: 5px;
 }
