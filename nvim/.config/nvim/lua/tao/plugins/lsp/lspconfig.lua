@@ -70,6 +70,7 @@ return {
 
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
+		capabilities.textDocument.foldingRange = { dynamicRegistration = false, lineFoldingOnly = true }
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
@@ -84,44 +85,6 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
-				})
-			end,
-			["svelte"] = function()
-				-- configure svelte server
-				lspconfig["svelte"].setup({
-					capabilities = capabilities,
-					on_attach = function(client, bufnr)
-						vim.api.nvim_create_autocmd("BufWritePost", {
-							pattern = { "*.js", "*.ts" },
-							callback = function(ctx)
-								-- Here use ctx.match instead of ctx.file
-								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-							end,
-						})
-					end,
-				})
-			end,
-			["graphql"] = function()
-				-- configure graphql language server
-				lspconfig["graphql"].setup({
-					capabilities = capabilities,
-					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-				})
-			end,
-			["emmet_ls"] = function()
-				-- configure emmet language server
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
-						"css",
-						"sass",
-						"scss",
-						"less",
-						"svelte",
-					},
 				})
 			end,
 			["lua_ls"] = function()
@@ -190,14 +153,14 @@ return {
 					settings = {
 						typescript = {
 							inlayHints = {
-								includeInlayParameterNameHints = "all",
-								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-								includeInlayFunctionParameterTypeHints = true,
-								includeInlayVariableTypeHints = true,
-								includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-								includeInlayPropertyDeclarationTypeHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
-								includeInlayEnumMemberValueHints = true,
+								-- includeInlayParameterNameHints = "all",
+								-- includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+								-- includeInlayFunctionParameterTypeHints = true,
+								-- includeInlayVariableTypeHints = true,
+								-- includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+								-- includeInlayPropertyDeclarationTypeHints = true,
+								-- includeInlayFunctionLikeReturnTypeHints = true,
+								-- includeInlayEnumMemberValueHints = true,
 							},
 						},
 						javascript = {
@@ -232,6 +195,21 @@ return {
 								functionTypeParameters = true,
 								parameterNames = true,
 								rangeVariableTypes = true,
+							},
+						},
+					},
+				})
+			end,
+			["yamlls"] = function()
+				require("lspconfig").yamlls.setup({
+					capabilities = capabilities,
+					settings = {
+						yaml = {
+							schemas = {
+								-- kubernetes = "/*.yaml",
+								-- Add the schema for gitlab piplines
+								-- ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*.gitlab-ci.yml",
+								["https://raw.githubusercontent.com/ansible/schemas/refs/heads/main/f/ansible-playbook.json"] = "*.yml",
 							},
 						},
 					},
