@@ -17,3 +17,8 @@ km.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 km.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 km.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 km.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Go to current buffer in new tab" })
+
+km.set({ "n", "v", "i" }, "<Down>", "<Nop>", { desc = "Disable arrow keys" })
+km.set({ "n", "v", "i" }, "<Up>", "<Nop>", { desc = "Disable arrow keys" })
+km.set({ "n", "v", "i" }, "<Left>", "<Nop>", { desc = "Disable arrow keys" })
+km.set({ "n", "v", "i" }, "<Right>", "<Nop>", { desc = "Disable arrow keys" })
