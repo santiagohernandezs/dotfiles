@@ -1,6 +1,5 @@
 return {
 	"neovim/nvim-lspconfig",
-	opts = { inlayHints = { enable = true } },
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
@@ -61,10 +60,18 @@ return {
 				km.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
 				opts.desc = "Show documentation for what is under cursor"
-				km.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+				km.set("n", "E", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 				opts.desc = "Restart LSP"
 				km.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				opts.desc = "Toggle LSP Inlay Hints"
+				km.set(
+					"n",
+					"<leader>ih",
+					":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
+					opts
+				) -- mapping to toggle inlay hints
 			end,
 		})
 
@@ -100,6 +107,9 @@ return {
 							},
 							completion = {
 								callSnippet = "Replace",
+							},
+							hint = {
+								enable = true,
 							},
 						},
 					},
@@ -154,18 +164,6 @@ return {
 					settings = {
 						typescript = {
 							inlayHints = {
-								-- includeInlayParameterNameHints = "all",
-								-- includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-								-- includeInlayFunctionParameterTypeHints = true,
-								-- includeInlayVariableTypeHints = true,
-								-- includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-								-- includeInlayPropertyDeclarationTypeHints = true,
-								-- includeInlayFunctionLikeReturnTypeHints = true,
-								-- includeInlayEnumMemberValueHints = true,
-							},
-						},
-						javascript = {
-							inlayHints = {
 								includeInlayParameterNameHints = "all",
 								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
 								includeInlayFunctionParameterTypeHints = true,
@@ -210,9 +208,17 @@ return {
 								-- kubernetes = "/*.yaml",
 								-- Add the schema for gitlab piplines
 								-- ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*.gitlab-ci.yml",
-								["https://raw.githubusercontent.com/ansible/schemas/refs/heads/main/f/ansible-playbook.json"] = "*.yml",
+								["https://raw.githubusercontent.com/ansible/schemas/refs/heads/main/f/ansible-playbook.json"] = "*.ansible.yml",
 							},
 						},
+					},
+				})
+			end,
+			["tinymist"] = function()
+				require("lspconfig").tinymist.setup({
+					settings = {
+						formatterMode = "typstfmt",
+						formatterPrintWidth = 100,
 					},
 				})
 			end,

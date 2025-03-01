@@ -32,11 +32,8 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
-				"graphql",
-				"emmet_ls",
 				"dockerls",
 				"rust_analyzer",
-				"prismals",
 				"pyright",
 				"gopls",
 			},
@@ -51,8 +48,9 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint",
-				"eslint_d",
+				"pylint", -- python linter
+				"eslint_d", -- javascript linter
+				"golangci-lint", -- golang linter
 			},
 		})
 	end,
