@@ -1,7 +1,7 @@
 return {
-	"kvrohit/rasmus.nvim",
+	"rebelot/kanagawa.nvim",
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme rasmus]])
+		require("kanagawa").load("dragon")
 	end,
 }
