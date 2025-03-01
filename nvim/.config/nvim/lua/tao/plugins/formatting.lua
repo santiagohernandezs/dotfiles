@@ -23,6 +23,7 @@ return {
 				python = { "isort", "black" },
 				tex = { "latexindent" },
 				go = { "gofmt" },
+				typst = { "typstfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
