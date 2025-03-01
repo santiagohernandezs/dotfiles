@@ -42,6 +42,8 @@ return {
 		km.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		km.set("n", "<leader>fh", "<cmd>Telescope harpoon marks<cr>", { desc = "Fuzzy find buffers" })
-		km.set("n", "<leader>fn", "<cmd>Telescope neoclip<cr>", { desc = "Fuzzy find buffers" })
+		km.set("n", "<leader>fp", "<cmd>Telescope neoclip<cr>", { desc = "Fuzzy find clipboard history" })
+		km.set("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Fuzzy find notifications" })
+		km.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Fuzzy find diagnostics" })
 	end,
 }
