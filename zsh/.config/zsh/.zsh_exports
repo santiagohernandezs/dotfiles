@@ -65,6 +65,12 @@ export VISUAL="nvim"
 export PYENV_ROOT="$XDG_CONFIG_HOME/pyenv"
 #
 #
+# PNPM Variables
+# ---------------
+# PNPM_HOME: The directory where pnpm is installed.
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+#
+#
 # Path Variables
 # --------------
 # PATH: The directories to search for executables.
@@ -72,6 +78,7 @@ export PATH=/home/tao/.local/bin:$PATH # Add local bin to path
 export PATH=$PATH:~/go/bin             # Add go bin to path
 export PATH="$BUN_INSTALL/bin:$PATH"   # Add bun bin to path
 export PATH="$PYENV_ROOT/bin:$PATH"    # Add pyenv bin to path
+export PATH="$PNPM_HOME:$PATH"     # Add pnpm bin to path
 #
 #
 # Bun Variables
@@ -96,4 +103,4 @@ export DENO_INSTALL="$XDG_DATA_HOME/deno"
 # Rust Variables
 # --------------
 # CARGO_HOME: The directory where cargo is installed.
-# export CARGO_HOME="$XDG_DATA_HOME/cargo"
+# export CARGO_HOME="$XDG_CACHE_HOME/cargo"
