@@ -46,6 +46,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 #
 #
@@ -54,6 +55,7 @@ zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::zoxide
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::docker
 #
 #
 # Key bindings
@@ -86,6 +88,7 @@ zinit cdreplay -q
 # 1password completions
 eval "$(op completion zsh)"; compdef _op op
 #
+eval "$(docker completion zsh)"; compdef _docker docker
 #
 # zoxide init
 eval "$(zoxide init zsh)"
