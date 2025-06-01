@@ -19,13 +19,13 @@
 
 ### Output configuration
 output * {
-  bg /home/tao/.config/sway/wallpaper.jpg fill 
+  # bg /home/tao/.config/sway/wallpaper.jpg fill 
   mode 1920x1080@74.973Hz
 }
 
 ### Window configuration
 default_border pixel 2
-gaps outer 6
+gaps outer 3
 gaps inner 5
 
 
@@ -38,6 +38,10 @@ exec swayidle -w \
 ### Input configuration
 input "5426:565:Razer_Razer_BlackWidow_Lite" {
   xkb_layout us,es
+}
+
+input "1133:49298:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
+  accel_profile flat
 }
 
 ### Key bindings
@@ -202,7 +206,5 @@ bindsym $mod+r mode "resize"
 bar {
     swaybar_command waybar
 }
-
-
 
 include /etc/sway/config.d/*
