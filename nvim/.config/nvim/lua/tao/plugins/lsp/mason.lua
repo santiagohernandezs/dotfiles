@@ -33,7 +33,6 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"dockerls",
-				"rust_analyzer",
 				"pyright",
 				"gopls",
 			},

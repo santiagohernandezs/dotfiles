@@ -87,141 +87,40 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		mason_lspconfig.setup_handlers({
-			-- default handler for installed servers
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-								disable = { "missing-fields" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-							hint = {
-								enable = true,
-							},
-						},
+		vim.lsp.config("lua_ls", {
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
+						disable = { "missing-fields" },
 					},
-				})
-			end,
-			["rust_analyzer"] = function()
-				-- configure rust server
-				lspconfig["rust_analyzer"].setup({
-					settings = {
-						capabilities = capabilities,
-						["rust-analyzer"] = {
-							inlayHints = {
-								bindingModeHints = {
-									enable = false,
-								},
-								chainingHints = {
-									enable = true,
-								},
-								closingBraceHints = {
-									enable = true,
-									minLines = 25,
-								},
-								closureReturnTypeHints = {
-									enable = "never",
-								},
-								lifetimeElisionHints = {
-									enable = "never",
-									useParameterNames = false,
-								},
-								maxLength = 25,
-								parameterHints = {
-									enable = true,
-								},
-								reborrowHints = {
-									enable = "never",
-								},
-								renderColons = true,
-								typeHints = {
-									enable = true,
-									hideClosureInitialization = false,
-									hideNamedConstructor = false,
-								},
-							},
-						},
+					completion = {
+						callSnippet = "Replace",
 					},
-				})
-			end,
-			["ts_ls"] = function()
-				-- configure typescript server
-				lspconfig["ts_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						typescript = {
-							inlayHints = {
-								includeInlayParameterNameHints = "all",
-								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-								includeInlayFunctionParameterTypeHints = true,
-								includeInlayVariableTypeHints = true,
-								includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-								includeInlayPropertyDeclarationTypeHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
-								includeInlayEnumMemberValueHints = true,
-							},
-						},
+					hint = {
+						enable = true,
 					},
-				})
-			end,
-			["gopls"] = function()
-				-- configure golang server
-				lspconfig["gopls"].setup({
-					on_attach = function(c, b)
-						-- enable inlay hints for gopls
-						vim.api.nvim_buf_set_option(b, "omnifunc", "v:lua.vim.lsp.omnifunc")
-					end,
-					settings = {
-						gopls = {
-							hints = {
-								assignVariableTypes = true,
-								compositeLiteralFields = true,
-								compositeLiteralTypes = true,
-								constantValues = true,
-								functionTypeParameters = true,
-								parameterNames = true,
-								rangeVariableTypes = true,
-							},
-						},
+				},
+			},
+		})
+
+		vim.lsp.config("ts_ls", {
+			capabilities = capabilities,
+			settings = {
+				typescript = {
+					inlayHints = {
+						includeInlayEnumMemberValueHints = true,
+						includeInlayFunctionParameterTypeHints = true,
+						includeInlayParameterNameHints = "all",
+						includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+						includeInlayPropertyDeclarationTypeHints = true,
+						includeInlayVariableTypeHints = true,
+						includeInlayVariableTypeHintsWhenTypeMatchesName = true,
 					},
-				})
-			end,
-			["yamlls"] = function()
-				require("lspconfig").yamlls.setup({
-					capabilities = capabilities,
-					settings = {
-						yaml = {
-							schemas = {
-								-- kubernetes = "/*.yaml",
-								-- Add the schema for gitlab piplines
-								-- ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*.gitlab-ci.yml",
-								["https://raw.githubusercontent.com/ansible/schemas/refs/heads/main/f/ansible-playbook.json"] = "*.ansible.yml",
-							},
-						},
-					},
-				})
-			end,
-			["tinymist"] = function()
-				require("lspconfig").tinymist.setup({
-					settings = {
-						formatterMode = "typstfmt",
-						formatterPrintWidth = 100,
-					},
-				})
-			end,
+				},
+			},
 		})
 	end,
 }

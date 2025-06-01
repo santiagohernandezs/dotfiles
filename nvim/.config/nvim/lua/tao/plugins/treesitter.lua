@@ -43,7 +43,6 @@ return {
 				"vimdoc",
 				"rust",
 				"astro",
-				"latex",
 			},
 			incremental_selection = {
 				enable = true,
