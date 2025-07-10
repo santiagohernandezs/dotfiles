@@ -3,8 +3,8 @@
 	autocrlf = false
   attributesFile = ~/.config/git/gitattributes
 [user]
-    name = Santiago Hernandez
-    email = santiagooheernandez@gmail.com
+	name = Santiago Hernandez
+	email = santiagooheernandez@gmail.com
     ui = true
     username = santiagohernandezs
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUnD8x/PsKRndVZKuIrNFOB8jfR5BO1hP8bLMa40qSz
@@ -13,7 +13,7 @@
 [safe]
     directory = *
 [alias]
-    tree = log --oneline --decorate --all
+    tree = log --oneline --decorate --graph --parents --all
     stat = status -sb
     staash = stash --all
 [gpg]
@@ -28,3 +28,9 @@
     path = ~/code/work/bpgenius/.gitconfig
 [column]
     ui = auto
+[url "git@github.com:santiagohernandezs/"]
+    insteadOf = "me:"
+[url "git@github.com:Beemo-inc/"]
+    insteadOf = "beemo:"
+[url "git@github.com:"]
+    insteadOf = "gh:"
