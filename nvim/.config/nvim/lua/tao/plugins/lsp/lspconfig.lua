@@ -122,5 +122,14 @@ return {
 				},
 			},
 		})
+
+		vim.lsp.config("tailwindcss", {
+			capabilities = capabilities,
+			settings = {
+				tailwindCSS = {
+					classFunctions = { "cva", "cx" },
+				},
+			},
+		})
 	end,
 }

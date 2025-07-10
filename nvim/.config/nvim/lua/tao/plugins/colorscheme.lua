@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("neomodern").setup({
-			theme = "hojicha",
+			theme = "roseprime",
 		})
 		require("neomodern").load()
 	end,
