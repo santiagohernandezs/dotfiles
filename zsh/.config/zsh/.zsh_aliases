@@ -13,6 +13,8 @@ alias cat="bat"
 alias top="btop"
 alias tm="tmux"
 alias szsh="source ~/.config/zsh/.zshrc"
+alias ld="lazydocker"
+alias lg="lazygit"
 #
 #
 # Editor Aliases
@@ -20,45 +22,6 @@ alias szsh="source ~/.config/zsh/.zshrc"
 alias vi="nvim"                        # Open Neovim (Main Editor)
 alias ze="zed"                         # Open Zed (Secondary Editor)
 alias vc="NVIM_APPNAME=nvim-chad nvim" # Open Neovim (Chad Editor)
-#
-#
-# Git Aliases
-# -----------
-alias lg="lazygit"                    # Open Lazygit
-alias gs="git status"                 # Git Status
-alias ga="git add"                    # Git Add
-alias gc="git commit"                 # Git Commit
-alias gp="git push"                   # Git Push
-alias gP="git pull"                   # Git Pull
-alias gb="git branch"                 # Git Branch
-alias gl="git log"                    # Git Log
-alias gd="git diff"                   # Git Diff
-alias gr="git restore"                # Git Restore
-alias gR="git reset"                  # Git Reset
-alias gC="git checkout"               # Git Checkout
-alias gM="git merge"                  # Git Merge
-alias gS="git stash"                  # Git Stash
-alias gL="git log --oneline"          # Git Log (One Line)
-#
-# 
-# Docker Aliases
-# --------------
-alias ld="lazydocker"                 # Open Lazydocker
-alias dc="docker-compose"             # Docker Compose
-alias dU="docker-compose up"          # Docker Compose Up
-alias dD="docker-compose down"        # Docker Compose Down
-alias dL="docker-compose logs"        # Docker Compose Logs
-alias dR="docker-compose restart"     # Docker Compose Restart
-alias ds="docker start"               # Docker Start
-alias dS="docker stop"                # Docker Stop
-alias dp="docker ps"                  # Docker PS
-alias di="docker images"              # Docker Images
-alias dr="docker run"                 # Docker Run
-alias dk="docker kill"                # Docker Kill
-alias dK="docker rm"                  # Docker Remove
-alias dI="docker inspect"             # Docker Inspect
-alias dE="docker exec"                # Docker Exec
-#
 #
 # File Management Aliases
 # -----------------------

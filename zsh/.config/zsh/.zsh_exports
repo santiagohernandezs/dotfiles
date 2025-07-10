@@ -100,6 +100,11 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export DENO_INSTALL="$XDG_DATA_HOME/deno"
 #
 #
+#Starship Variables
+# --------------
+# STARSHIP_CONFIG: The path to the starship configuration file.
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+#
 # Rust Variables
 # --------------
 # CARGO_HOME: The directory where cargo is installed.
