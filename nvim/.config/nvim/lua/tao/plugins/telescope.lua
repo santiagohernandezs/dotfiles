@@ -26,7 +26,6 @@ return {
 		})
 
 		telescope.load_extension("fzf")
-		telescope.load_extension("harpoon")
 		telescope.load_extension("neoclip")
 
 		-- WhichKey
@@ -41,7 +40,6 @@ return {
 		km.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		km.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-		km.set("n", "<leader>fh", "<cmd>Telescope harpoon marks<cr>", { desc = "Fuzzy find buffers" })
 		km.set("n", "<leader>fp", "<cmd>Telescope neoclip<cr>", { desc = "Fuzzy find clipboard history" })
 		km.set("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Fuzzy find notifications" })
 		km.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Fuzzy find diagnostics" })

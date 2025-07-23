@@ -1,11 +1,8 @@
 return {
-	"cdmill/neomodern.nvim",
+	"stevedylandev/darkmatter-nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("neomodern").setup({
-			theme = "roseprime",
-		})
-		require("neomodern").load()
+		vim.cmd("colorscheme darkmatter")
 	end,
 }
