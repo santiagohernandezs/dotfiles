@@ -5,9 +5,9 @@
 [user]
 	name = Santiago Hernandez
 	email = santiagooheernandez@gmail.com
-    ui = true
-    username = santiagohernandezs
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUnD8x/PsKRndVZKuIrNFOB8jfR5BO1hP8bLMa40qSz
+  ui = true
+  username = santiagohernandezs
+  signingkey = ~/.ssh/"Tao Sign.pub"
 [init]
     defaultBranch = main
 [safe]
@@ -22,8 +22,6 @@
     gpgsign = true
 [tag]
     forceSignAnnotated = false
-[gpg "ssh"]
-    program = "/opt/1Password/op-ssh-sign"
 [includeIf "gitdir:~/code/work/bpgenius/"]
     path = ~/code/work/bpgenius/.gitconfig
 [column]
