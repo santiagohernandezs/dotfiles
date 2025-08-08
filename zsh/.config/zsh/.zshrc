@@ -75,9 +75,6 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 #
 #
-# 1password completions
-eval "$(op completion zsh)"; compdef _op op
-#
 eval "$(docker completion zsh)"; compdef _docker docker
 #
 # zoxide init
