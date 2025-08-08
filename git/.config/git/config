@@ -7,7 +7,7 @@
 	email = santiagooheernandez@gmail.com
   ui = true
   username = santiagohernandezs
-  signingkey = ~/.ssh/"Tao Sign.pub"
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUnD8x/PsKRndVZKuIrNFOB8jfR5BO1hP8bLMa40qSz
 [init]
     defaultBranch = main
 [safe]
