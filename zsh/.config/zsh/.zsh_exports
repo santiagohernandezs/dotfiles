@@ -79,6 +79,7 @@ export PATH=$PATH:/usr/local/go/bin    # Add go bin to path
 export PATH="$BUN_INSTALL/bin:$PATH"   # Add bun bin to path
 export PATH="$PYENV_ROOT/bin:$PATH"    # Add pyenv bin to path
 export PATH="$PNPM_HOME:$PATH"     # Add pnpm bin to path
+export PATH=/home/tao/.local/share/pnpm:$PATH # Add pnpm local bin to path
 #
 #
 # Bun Variables
@@ -91,7 +92,8 @@ export BUN_INSTALL="$HOME/.bun"
 # SSH Variables
 # -------------
 # SSH_AUTH_SOCK: The path to the ssh agent socket.
-export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+# export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+export SSH_AUTH_SOCK="/home/tao/.bitwarden-ssh-agent.sock"
 #
 #
 # Deno Variables
