@@ -81,11 +81,37 @@ return {
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
-		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-		for type, icon in pairs(signs) do
-			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-		end
+		-- local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		-- for type, icon in pairs(signs) do
+		-- 	local hl = "DiagnosticSign" .. type
+		-- 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		-- end
+		--
+		-- Configure diagnostic and hover window appearance
+
+		local float_config = {
+			focusable = true,
+			style = "minimal",
+			border = "rounded",
+			source = true,
+			header = "",
+			prefix = "",
+		}
+		--
+		--
+		vim.diagnostic.config({
+			virtual_text = true,
+			update_in_insert = true,
+			float = float_config,
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.HINT] = "󰌶",
+					[vim.diagnostic.severity.INFO] = "",
+				},
+			},
+		})
 
 		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
