@@ -24,6 +24,7 @@ return {
 				tex = { "latexindent" },
 				go = { "gofmt" },
 				typst = { "typstyle" },
+				asm = { "asmfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
