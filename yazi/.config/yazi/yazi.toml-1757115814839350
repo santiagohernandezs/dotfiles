@@ -2,15 +2,5 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[mgr]
+[manager]
 show_hidden = true
-
-[opener]
-pdff = [
-  { run = 'zathura "$0"', orphan = true },
-]
-
-[open]
-append_rules = [
-	{ name = "*.pdf", use = "pdff" },
-]
