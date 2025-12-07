@@ -5,6 +5,9 @@
 [mgr]
 show_hidden = true
 
+[tasks]
+image_bound = [ 10000, 10000 ] 
+
 [opener]
 pdff = [
   { run = 'zathura "$0"', orphan = true },
