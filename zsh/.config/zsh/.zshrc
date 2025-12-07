@@ -99,10 +99,10 @@ eval "$(pyenv init --path)"
 # Load env vars from files
 #
 config_files=(
-  "$HOME/.cargo/env" # cargo
-  "$HOME/.local/share/deno/env" # deno
-  "$HOME/.bun/_bun" # bun completions
+  "$HOME/.local/opt/cargo/env" # cargo
+  "$HOME/.local/opt/bun/_bun" # bun completions
   "$NVM_DIR/nvm.sh" # nvm
 )
 
 load_env_files "${config_files[@]}"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
