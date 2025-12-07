@@ -1,4 +1,4 @@
-config-file=./ghostty.conf
+theme = noctalia
 
 font-size = 12
 font-feature = ss20
