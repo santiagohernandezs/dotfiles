@@ -31,6 +31,10 @@ export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000 
 export HISTDUP=erase                    # Erase duplicates in history
 #
+#
+# Hypershot Variables
+# -------------------
+HYPRSHOT_DIR="~/Pictures/screenshots"
 # 
 # Nvm Variables
 # ------------
@@ -83,6 +87,11 @@ export CARGO_HOME="$HOME/.local/opt/cargo"
 # RUSTUP_HOME: The directory where rustup is installed.
 export RUSTUP_HOME="$HOME/.local/opt/rustup"
 #
+# Gemini CLI Variables
+# --------------------
+# GEMINI_CLI_SYSTEM_DEFAULTS_PATH: The path to the gemini cli system defaults
+export GEMINI_CLI_SYSTEM_DEFAULTS_PATH="$XDG_CONFIG_HOME/gemini/config.json"
+#
 #
 # Go Variables
 # ------------
@@ -100,6 +109,7 @@ export PATH="$PNPM_HOME:$PATH"     # Add pnpm bin to path
 export PATH="$CARGO_HOME:$PATH"
 export PATH="$RUSTUP_HOME/bin:$PATH"
 export PATH=/home/tao/.local/share/pnpm:$PATH # Add pnpm local bin to path
+export PATH="$PATH:/home/tao/.local/share/JetBrains/Toolbox/scripts" # Add JetBrains Toolbox scripts to path
 #
 # SSH Variables
 # -------------
