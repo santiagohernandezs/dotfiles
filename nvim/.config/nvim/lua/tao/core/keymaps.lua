@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 local km = vim.keymap
 
-km.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+km.set("i", "kj", "<ESC>", { desc = "Exit insert mode with jk" })
 km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 km.set({ "i" }, "<C-s>", "<C-o>:w<ENTER>")
 km.set({ "n" }, "<C-s>", ":w<ENTER>")
