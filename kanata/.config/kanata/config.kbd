@@ -8,11 +8,10 @@
 )
 
 (defsrc
-  caps a s d f j k l ;
+ a s d f j k l ;
   )
 
 (defalias
-  esc (one-shot-press 500 esc)
   a (tap-hold $tap-time $hold-time a lmet)
   s (tap-hold $tap-time $hold-time s lalt)
   d (tap-hold $tap-time $hold-time d lsft)
@@ -24,5 +23,5 @@
   )
 
 (deflayer base
-  @esc @a @s @d @f @j @k @l @;
+  @a @s @d @f @j @k @l @;
   )
