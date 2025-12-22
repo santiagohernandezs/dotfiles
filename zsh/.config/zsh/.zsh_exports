@@ -78,14 +78,14 @@ export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 # ------------
 # BUN_INSTALL: The directory where bun is installed.
 # Path addition is done in the PATH section.
-export BUN_INSTALL="$HOME/.local/opt/bun"
+export BUN_INSTALL="$XDG_OPT_HOME/bun"
 #
 # Rust Variables
 # --------------
 # CARGO_HOME: The directory where cargo is installed.
-export CARGO_HOME="$HOME/.local/opt/cargo"
+export CARGO_HOME="$XDG_OPT_HOME/cargo"
 # RUSTUP_HOME: The directory where rustup is installed.
-export RUSTUP_HOME="$HOME/.local/opt/rustup"
+export RUSTUP_HOME="$XDG_OPT_HOME/rustup"
 #
 # Gemini CLI Variables
 # --------------------
@@ -96,7 +96,7 @@ export GEMINI_CLI_SYSTEM_DEFAULTS_PATH="$XDG_CONFIG_HOME/gemini/config.json"
 # Go Variables
 # ------------
 # GOPATH: The directory where go packages are installed.
-export GOPATH="$HOME/.local/opt/go"
+export GOPATH="$XDG_OPT_HOME/go"
 #
 # Path Variables
 # --------------
