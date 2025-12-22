@@ -106,3 +106,6 @@ config_files=(
 
 load_env_files "${config_files[@]}"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ensure unique entries in PATH
+typeset -U PATH path
