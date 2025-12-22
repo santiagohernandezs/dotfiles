@@ -16,6 +16,7 @@ alias szsh="source ~/.config/zsh/.zshrc"
 alias ld="lazydocker"
 alias lg="lazygit"
 alias clab="containerlab"
+alias path="echo $PATH | tr ':' '\n' | bat"
 #
 #
 # Editor Aliases
