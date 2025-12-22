@@ -17,6 +17,7 @@ return {
 			python = { "pylint" },
 			latex = { "chktex" },
 			go = { "golangcilint" },
+			sh = { "shellcheck" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

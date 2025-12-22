@@ -25,6 +25,7 @@ return {
 				go = { "gofmt" },
 				typst = { "typstyle" },
 				asm = { "asmfmt" },
+				sh = { "beautysh" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
