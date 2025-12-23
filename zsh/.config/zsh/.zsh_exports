@@ -39,7 +39,7 @@ HYPRSHOT_DIR="~/Pictures/screenshots"
 # Nvm Variables
 # ------------
 # NVM_DIR: The directory where nvm is installed.
-export NVM_DIR="$HOME/.local/opt/nvm"
+export NVM_DIR="$XDG_OPT_HOME/nvm"
 #
 #
 # Fzf Variables
@@ -74,6 +74,16 @@ export PYENV_ROOT="$XDG_CONFIG_HOME/pyenv"
 # PNPM_HOME: The directory where pnpm is installed.
 export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 #
+# Npm Variables
+# -------------
+# npm_config_cache: The directory where npm cache is stored.
+export npm_config_cache="$XDG_CACHE_HOME/npm"
+#
+# GNUPG Variables
+# ---------------
+# GNUPGHOME: The directory where gpg keys are stored.
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+#
 # Bun Variables
 # ------------
 # BUN_INSTALL: The directory where bun is installed.
@@ -91,6 +101,13 @@ export RUSTUP_HOME="$XDG_OPT_HOME/rustup"
 # --------------------
 # GEMINI_CLI_SYSTEM_DEFAULTS_PATH: The path to the gemini cli system defaults
 export GEMINI_CLI_SYSTEM_DEFAULTS_PATH="$XDG_CONFIG_HOME/gemini/config.json"
+#
+#
+# Ansible Variables
+# -----------------
+# ANSIBLE_CONFIG: The path to the ansible configuration file.
+export ANSIBLE_COLLECTIONS_PATH="$XDG_DATA_HOME/ansible/collections"
+export ANSIBLE_ROLES_PATH="$XDG_DATA_HOME/ansible/roles"
 #
 #
 # Go Variables
