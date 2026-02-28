@@ -1,12 +1,8 @@
 return {
-	"cdmill/neomodern.nvim",
+	"kdheepak/monochrome.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("neomodern").setup({
-			-- optional configuration here
-			theme = "roseprime",
-		})
-		require("neomodern").load()
+		vim.cmd.colorscheme("monochrome")
 	end,
 }
