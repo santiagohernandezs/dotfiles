@@ -12,18 +12,67 @@ alias cls="clear"
 alias cat="bat"
 alias top="btop"
 alias tm="tmux"
-alias szsh="source ~/.config/zsh/.zshrc"
+alias sr="source ~/.config/zsh/.zshrc"
 alias ld="lazydocker"
 alias lg="lazygit"
 alias clab="containerlab"
 alias path="echo $PATH | tr ':' '\n' | bat"
+alias ff="fastfetch"
+alias srb="systemctl soft-reboot"
+#
+# 
+# Kanata Aliases
+# -----------------
+alias ks="systemctl start --user kanata"
+alias kk="systemctl stop --user kanata"
+#
+# Aws Aliases
+# ---------------
+alias awslocal="aws --endpoint-url=http://localhost:4566"  # Use AWS CLI with LocalStack
+#
+#
+# Yay Aliases
+# ---------------
+alias yup="yay -Syu --noconfirm"        # Update all packages without confirmation
+alias yi="yay -S --noconfirm"          # Install a package without confirmation
+alias yr="yay -Rns --noconfirm"        # Remove a package and its dependencies without confirmation
+alias ycd="yay -Sc --noconfirm"         # Clean the package cache without confirmation
+alias ys="yay -Ss"                     # Search for a package
+#
+#
+# Pacman Aliases
+# ----------------
+alias pu="sudo pacman -Syu"             # Update all packages
+alias pi="sudo pacman -S"               # Install a package
+alias pr="sudo pacman -Rns"             # Remove a package and its dependencies
+alias pcd="sudo pacman -Sc"             # Clean the package cache
+alias ps="pacman -Ss"                   # Search for a package
+#
+#
+# Docker Aliases
+# ----------------
+alias ds="sudo systemctl start docker"   # Start Docker service
+alias dk="sudo systemctl stop docker"    # Stop Docker service
+#
+#
+# Suffix Aliases
+# ---------------
+alias -s ts="nvim"      # Open TypeScript files in Neovim
+alias -s js="nvim"      # Open JavaScript files in Neovim
+alias -s json="nvim"    # Open JSON files in Neovim
+alias -s md="bat"       # Open Markdown files in Bat
+alias -s yml="nvim"     # Open YAML files in Neovim
+alias -s yaml="nvim"    # Open YAML files in Neovim
+alias -s log="bat"      # Open Log files in Bat
+alias -s conf="nvim"    # Open Config files in Neovim
+alias -s toml="nvim"    # Open TOML files in Neovim
+alias -s pdf="zathura"  # Open PDF files in Zathura
 #
 #
 # Editor Aliases
 # --------------
 alias vi="nvim"                        # Open Neovim (Main Editor)
 alias ze="zed"                         # Open Zed (Secondary Editor)
-alias vc="NVIM_APPNAME=nvim-chad nvim" # Open Neovim (Chad Editor)
 #
 # File Management Aliases
 # -----------------------

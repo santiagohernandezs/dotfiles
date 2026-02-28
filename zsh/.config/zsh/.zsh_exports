@@ -17,7 +17,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CACHE_HOME=$HOME/.cache
 #
-#
 # Zsh Variables
 # ------------
 # ZDOTDIR: The directory where the shell configuration files are stored.
@@ -31,7 +30,6 @@ export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000 
 export HISTDUP=erase                    # Erase duplicates in history
 #
-#
 # Hypershot Variables
 # -------------------
 HYPRSHOT_DIR="~/Pictures/screenshots"
@@ -41,7 +39,6 @@ HYPRSHOT_DIR="~/Pictures/screenshots"
 # NVM_DIR: The directory where nvm is installed.
 export NVM_DIR="$XDG_OPT_HOME/nvm"
 #
-#
 # Fzf Variables
 # ------------
 # FZF_DEFAULT_COMMAND: The command to use for fzf.
@@ -49,12 +46,10 @@ export NVM_DIR="$XDG_OPT_HOME/nvm"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #
-#
 # Vim Variables
 # ------------
 # KEYTIMEOUT: The time in milliseconds to wait for a key code.
 export KEYTIMEOUT=1
-#
 #
 # General Variables
 # -----------------
@@ -62,7 +57,6 @@ export KEYTIMEOUT=1
 # VISUAL: The default visual editor to use.
 export EDITOR="nvim"
 export VISUAL="nvim"
-#
 #
 # Pyenv Variables
 # ---------------
@@ -102,6 +96,39 @@ export RUSTUP_HOME="$XDG_OPT_HOME/rustup"
 # GEMINI_CLI_SYSTEM_DEFAULTS_PATH: The path to the gemini cli system defaults
 export GEMINI_CLI_SYSTEM_DEFAULTS_PATH="$XDG_CONFIG_HOME/gemini/config.json"
 #
+# AWS Variables
+# --------------------
+# AWS_CONFIG_FILE: The path to the aws config file.
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+# AWS_SHARED_CREDENTIALS_FILE: The path to the aws credentials file.
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
+#
+# Docker Variables
+# ----------------
+# DOCKER_CONFIG: The directory where docker configuration files are stored.
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+#
+# Kube Variables
+# ----------------
+# KUBECONFIG: The path to the kube config file.
+export KUBECONFIG="$XDG_CONFIG_HOME/kube/config"
+#
+# Flutter Variables
+# -----------------
+# FLUTTER_ROOT: The directory where flutter is installed.
+export FLUTTER_ROOT="$XDG_OPT_HOME/flutter"
+#
+# Minikube Variables
+# -----------------
+# MINIKUBE_HOME: The directory where minikube configuration files are stored.
+export MINIKUBE_HOME="$XDG_CONFIG_HOME/minikube"
+#
+# Android Variables
+# -----------------
+# ANDROID_USER_HOME: The directory where android user files are stored.
+# export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+# ANDROID_HOME: The directory where the android sdk is installed.
+export ANDROID_HOME="$XDG_OPT_HOME/android-sdk"
 #
 # Ansible Variables
 # -----------------
@@ -109,6 +136,12 @@ export GEMINI_CLI_SYSTEM_DEFAULTS_PATH="$XDG_CONFIG_HOME/gemini/config.json"
 export ANSIBLE_COLLECTIONS_PATH="$XDG_DATA_HOME/ansible/collections"
 export ANSIBLE_ROLES_PATH="$XDG_DATA_HOME/ansible/roles"
 #
+# Terraform Variables
+# -------------------
+# TF_DATA_DIR: The directory where terraform data files are stored.
+export TF_DATA_DIR="$XDG_DATA_HOME/terraform"
+# TF_CLI_CONFIG_FILE: The path to the terraform configuration file.
+export TF_CLI_CONFIG_FILE="$XDG_CONFIG_HOME/terraform/cli.hcl"
 #
 # Go Variables
 # ------------
@@ -127,6 +160,9 @@ export PATH="$CARGO_HOME:$PATH"
 export PATH="$RUSTUP_HOME/bin:$PATH"
 export PATH=/home/tao/.local/share/pnpm:$PATH # Add pnpm local bin to path
 export PATH="$PATH:/home/tao/.local/share/JetBrains/Toolbox/scripts" # Add JetBrains Toolbox scripts to path
+export PATH="$FLUTTER_ROOT/bin:$PATH"  # Add flutter bin to path
+export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_DATA_HOME/dartServer" # Dart analyzer state location
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH" # Add android sdk to path
 #
 # SSH Variables
 # -------------

@@ -1,0 +1,2 @@
+BEETS_LIBRARY='~/.local/state/beet/musiclibrary.db'
+BEETS_CONFIG='/home/tao/.config/beets/config.yaml'
