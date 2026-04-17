@@ -157,5 +157,29 @@ return {
 				},
 			},
 		})
+
+		vim.lsp.config("yamlls", {
+			capabilities = capabilities,
+			settings = {
+				yaml = {
+					schemaStore = {
+						enable = false,
+						url = "",
+					},
+					schemas = require("schemastore").yaml.schemas(),
+				},
+			},
+		})
+
+		vim.lsp.config("rust_analyzer", {
+			capabilities = capabilities,
+			settings = {
+				["rust-analyzer"] = {
+					checkOnSave = {
+						command = "clippy",
+					},
+				},
+			},
+		})
 	end,
 }
