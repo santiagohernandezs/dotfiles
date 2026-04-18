@@ -108,6 +108,16 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 # DOCKER_CONFIG: The directory where docker configuration files are stored.
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 #
+# Gemini Variables
+# ----------------
+# GEMINI_API_KEY: The path to the file containing the gemini api key.
+export GEMINI_API_KEY="AIzaSyCmT0RYErGeJu2Vh-sf7zbAurewcKWzKng"
+#
+# Ledger Variables
+# ----------------
+# LEDGER_FILE: The path to the ledger file.
+export LEDGER_FILE="$HOME/Documents/finance/main.journal"
+#
 # Kube Variables
 # ----------------
 # KUBECONFIG: The path to the kube config file.
@@ -170,6 +180,10 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:
 # export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export SSH_AUTH_SOCK="/home/tao/.bitwarden-ssh-agent.sock"
 #
+# Bitwarden Variables
+# -----------------
+# BWS_ACCESS_TOKEN: The token to access the bitwarden cli.
+export BWS_ACCESS_TOKEN=0.2c84c9ca-8486-4d1c-926c-b40f01390e98.wwtICrng5Dv2dFfO7yB7zvpTk3T5Ky:Qfa4DwayNSIRnRkbw2G4eg==
 #
 #Starship Variables
 # --------------

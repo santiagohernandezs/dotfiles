@@ -41,6 +41,12 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::minikube
 zinit ice as"completion"
 zinit snippet "$XDG_OPT_HOME/bun/_bun" # bun completions
+zinit ice as"completion"
+zinit snippet "$XDG_DATA_HOME/bws/completions/_bws" # bws (bitwarden cli) completions
+zinit ice as"completion"
+zinit snippet "$XDG_DATA_HOME/gitleaks/completions/_gitleaks" # gitleaks completions
+zinit ice as"completion"
+zinit snippet "$XDG_DATA_HOME/todo/completions/_todo" # todo completions
 zinit snippet OMZP::nvm
 zinit snippet OMZP::aws
 #

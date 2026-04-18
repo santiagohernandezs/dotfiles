@@ -15,6 +15,7 @@ alias tm="tmux"
 alias sr="source ~/.config/zsh/.zshrc"
 alias ld="lazydocker"
 alias lg="lazygit"
+alias ltm="lazy-tmux"
 alias clab="containerlab"
 alias path="echo $PATH | tr ':' '\n' | bat"
 alias ff="fastfetch"
@@ -28,7 +29,7 @@ alias kk="systemctl stop --user kanata"
 #
 # Aws Aliases
 # ---------------
-alias awslocal="aws --endpoint-url=http://localhost:4566"  # Use AWS CLI with LocalStack
+alias awslocal="aws --endpoint-url=http://localhost:4566 --profile dev"  # Use AWS CLI with LocalStack
 #
 #
 # Yay Aliases
@@ -54,6 +55,12 @@ alias ps="pacman -Ss"                   # Search for a package
 alias ds="sudo systemctl start docker"   # Start Docker service
 alias dk="sudo systemctl stop docker"    # Stop Docker service
 #
+# Terraform Aliases
+# ----------------
+alias tf="terraform"                     # Run Terraform
+alias tfp="terraform plan"                # Run Terraform plan
+alias tfa="terraform apply"               # Run Terraform apply
+alias tfd="terraform destroy"             # Run Terraform destroy
 #
 # Suffix Aliases
 # ---------------
