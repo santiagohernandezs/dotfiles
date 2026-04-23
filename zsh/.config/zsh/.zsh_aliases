@@ -20,6 +20,7 @@ alias clab="containerlab"
 alias path="echo $PATH | tr ':' '\n' | bat"
 alias ff="fastfetch"
 alias srb="systemctl soft-reboot"
+alias hl="hledger -s"
 #
 # 
 # Kanata Aliases

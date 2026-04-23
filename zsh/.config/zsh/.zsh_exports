@@ -116,7 +116,7 @@ export GEMINI_API_KEY="AIzaSyCmT0RYErGeJu2Vh-sf7zbAurewcKWzKng"
 # Ledger Variables
 # ----------------
 # LEDGER_FILE: The path to the ledger file.
-export LEDGER_FILE="$HOME/Documents/finance/main.journal"
+export LEDGER_FILE="$HOME/Documents/finance/main.ldg"
 #
 # Kube Variables
 # ----------------
