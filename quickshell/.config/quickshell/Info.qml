@@ -5,14 +5,12 @@ RowLayout {
   id: info
   spacing: 0
 
-  // Props
   property string kernel: ""
   property int cpu: 0
   property int mem: 0
   property int disk: 0
   property int vol: 0
-  
-  // Theme Props
+
   property color color: "white"
   property color separatorColor: "gray"
   property int fontSize: 12
