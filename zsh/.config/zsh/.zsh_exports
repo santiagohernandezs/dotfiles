@@ -66,7 +66,7 @@ export PYENV_ROOT="$XDG_CONFIG_HOME/pyenv"
 # PNPM Variables
 # ---------------
 # PNPM_HOME: The directory where pnpm is installed.
-export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+export PNPM_HOME="$XDG_DATA_HOME/pnpm/bin"
 #
 # Npm Variables
 # -------------
