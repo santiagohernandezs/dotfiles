@@ -1,0 +1,159 @@
+@import "colors.rasi"
+
+* {
+    font: "Inter 11, FiraCode Nerd Font 11";
+    background-color:   transparent;
+    text-color:         @on-surface;
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    location:           center;
+    anchor:             center;
+    width:              480px;
+    x-offset:           0px;
+    y-offset:           0px;
+    enabled:            true;
+    border:             1px solid;
+    border-radius:      0px;
+    border-color:       @outline-variant;
+    background-color:   @surface;
+}
+
+mainbox {
+    enabled:            true;
+    spacing:            8px;
+    padding:            12px;
+    background-color:   transparent;
+    children:           [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled:            true;
+    spacing:            8px;
+    padding:            8px 12px;
+    border-radius:      0px;
+    background-color:   @surface-container-high;
+    text-color:         @on-surface;
+    children:           [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:            true;
+    background-color:   transparent;
+    text-color:         @primary;
+}
+
+entry {
+    enabled:            true;
+    background-color:   transparent;
+    text-color:         @on-surface;
+    cursor:             text;
+    placeholder:        "Buscar...";
+    placeholder-color:  @on-surface-variant;
+}
+
+message {
+    enabled:            true;
+    margin:             0px;
+    padding:            8px;
+    border-radius:      0px;
+    background-color:   @surface-container-low;
+    text-color:         @on-surface;
+}
+
+textbox {
+    background-color:   transparent;
+    text-color:         inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+listview {
+    enabled:            true;
+    columns:            1;
+    lines:              8;
+    cycle:              true;
+    dynamic:            true;
+    scrollbar:          false;
+    layout:             vertical;
+    reverse:            false;
+    fixed-height:       true;
+    fixed-columns:      true;
+    spacing:            4px;
+    padding:            2px 0px 0px 0px;
+    background-color:   transparent;
+    text-color:         @on-surface;
+}
+
+element {
+    enabled:            true;
+    spacing:            8px;
+    padding:            6px 10px;
+    border-radius:      0px;
+    background-color:   transparent;
+    text-color:         @on-surface-variant;
+    cursor:             pointer;
+}
+
+element normal.normal {
+    background-color:   transparent;
+    text-color:         @on-surface-variant;
+}
+
+element normal.urgent {
+    background-color:   @error-container;
+    text-color:         @on-error-container;
+}
+
+element normal.active {
+    background-color:   @secondary-container;
+    text-color:         @on-secondary-container;
+}
+
+element selected.normal {
+    background-color:   @primary-container;
+    text-color:         @on-primary-container;
+}
+
+element selected.urgent {
+    background-color:   @error;
+    text-color:         @on-error;
+}
+
+element selected.active {
+    background-color:   @primary;
+    text-color:         @on-primary;
+}
+
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         @on-surface-variant;
+}
+
+element alternate.urgent {
+    background-color:   @error-container;
+    text-color:         @on-error-container;
+}
+
+element alternate.active {
+    background-color:   @secondary-container;
+    text-color:         @on-secondary-container;
+}
+
+element-icon {
+    background-color:   transparent;
+    text-color:         inherit;
+    size:               22px;
+    cursor:             inherit;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    cursor:             inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}

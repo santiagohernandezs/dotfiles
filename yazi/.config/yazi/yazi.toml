@@ -1,0 +1,19 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[mgr]
+show_hidden = true
+
+[tasks]
+image_bound = [ 10000, 10000 ] 
+
+[opener]
+pdff = [
+  { run = 'zathura "$0"', orphan = true },
+]
+
+[open]
+append_rules = [
+	{ name = "*.pdf", use = "pdff" },
+]

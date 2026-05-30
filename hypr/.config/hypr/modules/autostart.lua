@@ -1,0 +1,10 @@
+local programs = require("modules.programs")
+
+hl.on("hyprland.start", function()
+  hl.exec_cmd("qs")
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("dunst")
+  hl.exec_cmd("vesktop")
+  hl.exec_cmd("zen-twilight")
+  hl.exec_cmd("ghostty")
+end)

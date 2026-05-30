@@ -1,0 +1,34 @@
+[core]
+  editor = nvim -f
+  autocrlf = false
+  attributesFile = ~/.config/git/gitattributes
+[init]
+  defaultBranch = main
+[safe]
+  directory = *
+[alias]
+  tree = log --oneline --decorate --graph --parents --all
+  stat = status -sb
+  staash = stash --all
+[gpg]
+  format = ssh
+[commit]
+  gpgsign = true
+[tag]
+  forceSignAnnotated = false
+[column]
+  ui = auto
+[url "git@github.com:santiagohernandezs/"]
+  insteadOf = "me:"
+[url "git@github.com:Beemo-inc/"]
+  insteadOf = "beemo:"
+[url "git@github.com:"]
+  insteadOf = "gh:"
+[credential "https://github.com"]
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
+[include]
+  path = ~/.config/git/config.local

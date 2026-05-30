@@ -1,0 +1,6 @@
+[user]
+  name = Tu Nombre
+  email = tu@email.com
+  ui = true
+  username = tu_usuario_github
+  signingkey = ~/.ssh/tu_llave.pub
