@@ -1,6 +1,6 @@
 configuration {
   modes: [combi];
-  combi-modes: [window,drun,run];
+  combi-modes: [window,drun,run,games];
   show-icons: true;
   terminal: "ghostty";
 
