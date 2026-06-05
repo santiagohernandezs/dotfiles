@@ -1,3 +1,4 @@
+//@ pragma UseQApplication
 import Quickshell
 import Quickshell.Wayland
 import QtQuick
@@ -51,68 +52,71 @@ ShellRoot {
   Variants {
     model: Quickshell.screens
 
-    PanelWindow {
-      property var modelData
-      screen: modelData
+    delegate: Component {
+      PanelWindow {
+        id: panelWin
+        property var modelData
+        screen: modelData
 
-      anchors {
-        top: true
-        left: true
-        right: true
-      }
+        anchors {
+          top: true
+          left: true
+          right: true
+        }
 
-      implicitHeight: 30
-      color: root.colBg
-
-      Rectangle {
-        anchors.fill: parent
+        implicitHeight: 30
         color: root.colBg
 
-        RowLayout {
+        Rectangle {
           anchors.fill: parent
-          spacing: 0
+          color: root.colBg
 
-          Item { width: 8 }
+          RowLayout {
+            anchors.fill: parent
+            spacing: 0
 
-          Workspaces {
-            activeColor: root.colAccent
-            windowColor: root.colFg
-            inactiveColor: root.colMuted
-            bgColor: root.colBg
-            fontSize: root.fontSize
-            fontFamily: root.fontFamily
+            Item { width: 8 }
+
+            Workspaces {
+              activeColor: root.colAccent
+              windowColor: root.colFg
+              inactiveColor: root.colMuted
+              bgColor: root.colBg
+              fontSize: root.fontSize
+              fontFamily: root.fontFamily
+            }
+
+            Rectangle {
+              Layout.preferredWidth: 1; Layout.preferredHeight: 16
+              Layout.alignment: Qt.AlignVCenter
+              Layout.leftMargin: 8; Layout.rightMargin: 12
+              color: root.colMuted
+            }
+
+            Text {
+              text: sys.activeWindow
+              color: root.colFg
+              font.pixelSize: root.fontSize
+              font.family: root.fontFamily
+              font.bold: true
+              Layout.fillWidth: true
+              elide: Text.ElideRight
+            }
+
+            Info {
+              kernel: sys.kernel
+              cpu: sys.cpu
+              mem: sys.mem
+              disk: sys.disk
+              vol: sys.vol
+              color: root.colFg
+              separatorColor: root.colMuted
+              fontSize: root.fontSize
+              fontFamily: root.fontFamily
+            }
+
+            Item { width: 8 }
           }
-
-          Rectangle {
-            Layout.preferredWidth: 1; Layout.preferredHeight: 16
-            Layout.alignment: Qt.AlignVCenter
-            Layout.leftMargin: 8; Layout.rightMargin: 12
-            color: root.colMuted
-          }
-
-          Text {
-            text: sys.activeWindow
-            color: root.colFg
-            font.pixelSize: root.fontSize
-            font.family: root.fontFamily
-            font.bold: true
-            Layout.fillWidth: true
-            elide: Text.ElideRight
-          }
-
-          Info {
-            kernel: sys.kernel
-            cpu: sys.cpu
-            mem: sys.mem
-            disk: sys.disk
-            vol: sys.vol
-            color: root.colFg
-            separatorColor: root.colMuted
-            fontSize: root.fontSize
-            fontFamily: root.fontFamily
-          }
-
-          Item { width: 8 }
         }
       }
     }

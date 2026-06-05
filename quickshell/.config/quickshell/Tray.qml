@@ -1,22 +1,45 @@
 import QtQuick
-import Quickshell.Services.SystemTray
 import QtQuick.Layouts
+import Quickshell.Services.SystemTray
+import Quickshell.Widgets
+import Quickshell
 
 RowLayout {
   Layout.alignment: Qt.AlignVCenter
-  spacing: 5
+  spacing: 6
 
   Repeater {
     model: SystemTray.items
 
     delegate: Item {
-      implicitWidth: 17
-      implicitHeight: 17
+      id: trayIconContainer
+      implicitWidth: 18
+      implicitHeight: 18
 
-      Image {
+      QsMenuAnchor {
+        id: menuAnchor
+        menu: modelData.menu
+        anchor.item: trayIconContainer
+      }
+
+      IconImage {
         source: modelData.icon
         anchors.fill: parent
-        fillMode: Image.PreserveAspectFit
+      }
+
+      MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
+
+        onClicked: (mouse) => {
+          if (mouse.button === Qt.RightButton) {
+            if (modelData.hasMenu) {
+              menuAnchor.open()
+            }
+          } else if (mouse.button === Qt.LeftButton) {
+            modelData.activate()
+          }
+        }
       }
     }
   }
