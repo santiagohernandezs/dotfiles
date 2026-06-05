@@ -61,3 +61,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- Screenshots
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+
+-- Clipboard
+hl.bind(mainMod .. " + C",
+  hl.dsp.exec_cmd("rofi -modi clipboard:~/.config/hypr/scripts/cliphist-rofi.sh -show clipboard -show-icons"))
