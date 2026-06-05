@@ -24,7 +24,7 @@ hl.window_rule({
   float = true,
 })
 
-local init_apps = { { name = "com.mitchellh.ghostty", wk = 1 }, { name = "zen-twilight", wk = 2 }, { name = "vesktop", wk = 3 } }
+local init_apps = { { name = "com.mitchellh.ghostty", wk = 1 }, { name = "zen-twilight", wk = 2 }, { name = "discord-canary", wk = 3 } }
 
 for i, app in pairs(init_apps) do
   hl.window_rule({
