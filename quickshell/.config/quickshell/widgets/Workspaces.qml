@@ -5,13 +5,6 @@ import Quickshell.Hyprland
 RowLayout {
   spacing: 0
 
-  property color activeColor: "white"
-  property color windowColor: "lightgray"
-  property color inactiveColor: "gray"
-  property color bgColor: "black"
-  property int fontSize: 12
-  property string fontFamily: "sans"
-
   Repeater {
     model: 9
     Rectangle {
@@ -25,9 +18,9 @@ RowLayout {
 
       Text {
         text: index + 1
-        color: parent.isActive ? activeColor : (parent.hasWindows ? windowColor : inactiveColor)
-        font.pixelSize: fontSize
-        font.family: fontFamily
+        color: parent.isActive ? theme.accent : (parent.hasWindows ? theme.fg : theme.muted)
+        font.pixelSize: theme.fontSize
+        font.family: theme.fontFamily
         font.bold: true
         anchors.centerIn: parent
       }
@@ -35,7 +28,7 @@ RowLayout {
       Rectangle {
         width: 16
         height: 2
-        color: parent.isActive ? activeColor : "transparent"
+        color: parent.isActive ? theme.accent : "transparent"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 4
