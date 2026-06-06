@@ -6,5 +6,6 @@ Rectangle {
   Layout.preferredHeight: 16
   Layout.alignment: Qt.AlignVCenter
   Layout.leftMargin: 8
-  Layout.rightMargin: 12
+  Layout.rightMargin: 8
+  color: theme.muted
 }

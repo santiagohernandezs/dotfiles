@@ -1,9 +1,22 @@
 import QtQuick
 
-Text {
-  text: "CPU: " + sys.cpu + "%"
-  color: theme.fg
-  font.pixelSize: theme.fontSize
-  font.family: theme.fontFamily
-  font.bold: true
+Row {
+  spacing: 4
+
+  Text {
+    text: ""
+    color: theme.fg
+    font.pixelSize: theme.fontSize
+    font.family: theme.fontFamily
+    font.bold: true
+  }
+
+  Text {
+    text: sys.cpu + "%"
+    color: theme.fg
+    font.pixelSize: theme.fontSize
+    font.family: theme.fontFamily
+    font.bold: true
+  }
+
 }

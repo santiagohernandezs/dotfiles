@@ -32,7 +32,7 @@ PanelWindow {
 
       Widgets.Workspaces {}
 
-      Ui.Separator { color: theme.muted }
+      Ui.Separator {}
 
       Text {
         text: sys.activeWindow
@@ -46,23 +46,23 @@ PanelWindow {
 
       Widgets.Kernel {}
 
-      Ui.Separator { color: theme.muted }
+      Ui.Separator {}
 
-      Widgets.Cpu {}
+      RowLayout {
+        spacing: 8
 
-      Ui.Separator { color: theme.muted }
+        Widgets.Cpu {}
 
-      Widgets.Memory {}
+        Widgets.Memory {}
 
-      Ui.Separator { color: theme.muted }
+        Widgets.Disk {}
+      }
 
-      Widgets.Disk {}
-
-      Ui.Separator { color: theme.muted }
+      Ui.Separator {}
 
       Widgets.Volume {}
 
-      Ui.Separator { color: theme.muted }
+      Ui.Separator {}
 
       Widgets.Tray {}
 
