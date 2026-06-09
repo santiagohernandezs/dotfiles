@@ -12,6 +12,7 @@ Item {
   property int vol: 0
   property string activeWindow: "Window"
   property string currentLayout: "Tile"
+  property string time: "00:00"
 
   property var _lastCpuIdle: 0
   property var _lastCpuTotal: 0
@@ -90,7 +91,21 @@ Item {
   // Timers
   Timer {
     interval: 2000; running: true; repeat: true
-    onTriggered: { cpuProc.running = true; memProc.running = true; diskProc.running = true; volProc.running = true }
+    onTriggered: { cpuProc.running = true; memProc.running = true; volProc.running = true }
+  }
+
+  Timer {
+    interval: 1000 * 60; running: true; repeat: true
+    triggeredOnStart: true
+    onTriggered: { diskProc.running = true }
+  }
+
+  Timer {
+    interval: 1000; running: true; repeat: true
+    triggeredOnStart: true
+    onTriggered: {
+      sys.time = Qt.formatDateTime(new Date(), "hh:mm")
+    }
   }
 
   Timer {

@@ -1,4 +1,5 @@
 import Quickshell
+import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
@@ -11,6 +12,13 @@ PanelWindow {
 
   property var modelData
   screen: modelData
+  visible: true
+
+  IpcHandler {
+    target: "panelWin"
+
+    function toggleVisible(): void { panelWin.visible = !panelWin.visible }
+  }
 
   anchors {
     top: true
@@ -44,9 +52,7 @@ PanelWindow {
         elide: Text.ElideRight
       }
 
-      Widgets.Kernel {}
-
-      Ui.Separator {}
+      Widgets.Time {}
 
       RowLayout {
         spacing: 8
