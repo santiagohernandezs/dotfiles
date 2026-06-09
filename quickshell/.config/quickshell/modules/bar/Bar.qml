@@ -66,7 +66,7 @@ PanelWindow {
 
       Ui.Separator {}
 
-      Widgets.Volume {}
+      Widgets.Network {}
 
       Ui.Separator {}
 
