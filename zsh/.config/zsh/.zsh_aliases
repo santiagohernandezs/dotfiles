@@ -16,12 +16,9 @@ alias sr="source ~/.config/zsh/.zshrc"
 alias ld="lazydocker"
 alias lg="lazygit"
 alias ltm="lazy-tmux"
-alias clab="containerlab"
 alias path="echo $PATH | tr ':' '\n' | bat"
-alias ff="fastfetch"
-alias srb="systemctl soft-reboot"
 alias hl="hledger -s"
-alias containerlab="sudo containerlab"
+alias clab="sudo containerlab"
 #
 # 
 # Kanata Aliases
@@ -32,7 +29,6 @@ alias kk="systemctl stop --user kanata"
 # Aws Aliases
 # ---------------
 alias awslocal="aws --endpoint-url=http://localhost:4566 --profile dev"  # Use AWS CLI with LocalStack
-#
 #
 # Yay Aliases
 # ---------------
@@ -51,19 +47,6 @@ alias pr="sudo pacman -Rns"             # Remove a package and its dependencies
 alias pcd="sudo pacman -Sc"             # Clean the package cache
 alias pss="pacman -Ss"                   # Search for a package
 #
-#
-# Docker Aliases
-# ----------------
-alias ds="sudo systemctl start docker"   # Start Docker service
-alias dk="sudo systemctl stop docker"    # Stop Docker service
-#
-# Terraform Aliases
-# ----------------
-alias tf="terraform"                     # Run Terraform
-alias tfp="terraform plan"                # Run Terraform plan
-alias tfa="terraform apply"               # Run Terraform apply
-alias tfd="terraform destroy"             # Run Terraform destroy
-#
 # Suffix Aliases
 # ---------------
 alias -s ts="nvim"      # Open TypeScript files in Neovim
@@ -81,7 +64,6 @@ alias -s pdf="zathura"  # Open PDF files in Zathura
 # Editor Aliases
 # --------------
 alias vi="nvim"                        # Open Neovim (Main Editor)
-alias ze="zed"                         # Open Zed (Secondary Editor)
 #
 # File Management Aliases
 # -----------------------
@@ -89,9 +71,3 @@ alias lh="eza -dl .* --icons --group-directories-first"
 alias ll="eza -al --icons --group-directories-first"
 alias ls="eza -alf --color-always --sort=size --icons"
 alias lt="eza -al --icons --sort=modified"
-alias yz="yazi"
-#
-#
-# Miscellaneous Aliases
-# -------------------------
-alias sesh="sesh list -i | gum filter --limit 1 --placeholder 'Pick a sesh' --height 50 --prompt='⚡'" # Open Sesh for tmux sessions

@@ -145,13 +145,6 @@ export ANDROID_HOME="$XDG_OPT_HOME/android-sdk"
 export ANSIBLE_COLLECTIONS_PATH="$XDG_DATA_HOME/ansible/collections"
 export ANSIBLE_ROLES_PATH="$XDG_DATA_HOME/ansible/roles"
 #
-# Terraform Variables
-# -------------------
-# TF_DATA_DIR: The directory where terraform data files are stored.
-export TF_DATA_DIR="$XDG_DATA_HOME/terraform"
-# TF_CLI_CONFIG_FILE: The path to the terraform configuration file.
-export TF_CLI_CONFIG_FILE="$XDG_CONFIG_HOME/terraform/cli.hcl"
-#
 # Go Variables
 # ------------
 # GOPATH: The directory where go packages are installed.
