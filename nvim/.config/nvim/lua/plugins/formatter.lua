@@ -5,7 +5,9 @@ conform.setup({
     lua = { "luacheck" },
     python = { "isort", "black" },
     rust = { "rustfmt", lsp_format = "fallback" },
-    typescript = { "biome-check" }
+    typescript = { "biome-check" },
+    typst = { "typstyle" },
+    terraform = { "terraform_fmt" }
   },
   format_on_save = {
     lsp_fallback = true,

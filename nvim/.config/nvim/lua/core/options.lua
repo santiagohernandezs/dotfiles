@@ -21,3 +21,10 @@ vim.o.path = vim.o.path .. ",**"
 vim.o.tags = vim.o.tags .. ",/home/tao/.config/nvim/tags"
 vim.o.pumborder = "rounded"
 vim.o.foldlevel = 10
+
+vim.filetype.add({
+  extension = {
+    tf = "terraform",
+    tfvars = "terraform",
+  },
+})

@@ -1,6 +1,6 @@
 -- [[ LSP Setup ]]
 local servers = { "lua_ls", "rust_analyzer", "jsonls", "yamlls", "bashls", "astro", "qml-language-server",
-  "dockerls", "ts_ls" }
+  "dockerls", "ts_ls", "typst_lsp", "terraform_lsp" }
 vim.lsp.enable(servers)
 
 -- Configuración global de diagnósticos
@@ -33,7 +33,8 @@ lint.linters_by_ft = {
   go = { "golangcilint" },
   sh = { "shellcheck" },
   lua = { "luacheck" },
-  qml = { "qmllint" }
+  qml = { "qmllint" },
+  terraform = { "tflint" }
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

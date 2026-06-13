@@ -8,7 +8,7 @@
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'qml-language-server' },
+  cmd = { 'qmlls6' },
   filetypes = { 'qml' },
   root_markers = { { "qmldir", "shell.qml" }, ".git" }
 }
