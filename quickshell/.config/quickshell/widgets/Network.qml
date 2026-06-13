@@ -10,8 +10,6 @@ Text {
   font.family: theme.fontFamily
   font.bold: true
 
-  property var barWindow: null
-
   function displayConectivity(devices) {
     let connectedDevice = devices.find(dev => dev.connected)
     if (!connectedDevice) return "Disconnected"

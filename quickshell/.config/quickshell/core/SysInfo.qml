@@ -78,7 +78,7 @@ Item {
 
   Process {
     id: windowProc
-    command: ["sh", "-c", "hyprctl activewindow -j | jq -r '.title // empty'"]
+    command: ["sh", "-c", "hyprctl activewindow -j | jq -r '.initialTitle // .title // empty'"]
     stdout: SplitParser { onRead: data => { if (data && data.trim()) sys.activeWindow = data.trim() } }
   }
 

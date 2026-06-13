@@ -1,23 +1,24 @@
 //@ pragma UseQApplication
 import Quickshell
-import Quickshell.Wayland
 import QtQuick
-import QtQuick.Layouts
-import Quickshell.Io
 
 import "./modules/bar/"
 import "./core"
 
 ShellRoot {
-  id: root
+    id: root
 
-  Theme { id: theme }
+    Theme {
+        id: theme
+    }
 
-  SysInfo { id: sys }
+    SysInfo {
+        id: sys
+    }
 
-  Variants {
-    model: Quickshell.screens
+    Variants {
+        model: Quickshell.screens
 
-    delegate: Bar {}
-  }
+        delegate: Bar {}
+    }
 }
